@@ -1,13 +1,13 @@
-package com.literalura.LiterAlura;
+package com.alura.literalura.literalura;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class LiterAluraApplication {
+public class LiteraluraApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(LiterAluraApplication.class, args);
+		SpringApplication.run(LiteraluraApplication.class, args);
 	}
 
 }
