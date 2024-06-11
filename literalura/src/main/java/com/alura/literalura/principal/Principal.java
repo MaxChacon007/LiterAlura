@@ -30,8 +30,25 @@ public class Principal {
 //                .map(l -> l.titulo().toUpperCase())
 //                .forEach(System.out::println);
 
+
+        String menu = """
+               *********************************************
+                                BIENVENIDO
+                Eliga una opción, por favor
+                
+                    1 Buscar libro por titulo
+                    2 listar libros registrados
+                    3 listar autores registrados
+                    4 listar autores vivos en un determinado año
+                    5 listar libros por idioma
+                    0 - salir
+                    
+               *********************************************
+                """;
+        System.out.println(menu);
+
         //Busqueda de libros por nombre
-        System.out.println("Ingrese el nombre del libro que desea buscar");
+        
         var tituloLibro = teclado.nextLine();
         json = consumoAPI.obtenerDatos(URL_BASE+"?search=" + tituloLibro.replace(" ","+"));
         var datosBusqueda = conversor.obtenerDatos(json, Datos.class);
