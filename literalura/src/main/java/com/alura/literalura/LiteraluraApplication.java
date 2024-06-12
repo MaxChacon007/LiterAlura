@@ -17,14 +17,14 @@ public class LiteraluraApplication  implements  CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {//esto sale de la Clase consumo API,
 	var consumoApi = new ConsumoAPI();
-	var	json = consumoApi.obtenerDatos("https://gutendex.com/books/");
-		System.out.println(json);
+////	var	json = consumoApi.obtenerDatos("https://gutendex.com/books/");
+////		System.out.println(json);
 		ConvierteDatos conversor = new ConvierteDatos();
-		 var datos= conversor.obtenerDatos(json, DatosLibros.class);
-		//System.out.println(datos);
+//		 var datos= conversor.obtenerDatos(json, DatosLibros.class);
+//		//System.out.println(datos);
 
-		var	json1 = consumoApi.obtenerDatos("https://gutendex.com/books/");
-		DatosLibros datosLibros = conversor.obtenerDatos(json1,DatosLibros.class);
+		var	json = consumoApi.obtenerDatos("https://gutendex.com/books/");
+		DatosLibros datosLibros = conversor.obtenerDatos(json,DatosLibros.class);
 		System.out.println(datosLibros);
 	}
 }
